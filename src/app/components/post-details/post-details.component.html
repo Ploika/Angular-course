@@ -1,1 +1,5 @@
-<p>{{post | json}}</p>
+<p *ngIf="post">
+  <strong>{{post.id}}-</strong>
+  <strong>{{post.title}}</strong> -
+   {{post.body}}
+</p>

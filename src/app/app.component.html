@@ -1,12 +1,13 @@
-<h1>{{title}}</h1>
+<!-- <h1>{{title}}</h1> -->
   <!-- <app-users></app-users> -->
 
-<ul>
-  <li> <a [routerLink]="['home']">home</a></li>
-  <li><a [routerLink]="['users']">users</a> </li>
-  <li><a [routerLink]="['posts']">posts</a></li>
-  <li>comments</li>
-</ul>
+<div class="main">
+  <ul>
+    <li class="first_li"> <a [routerLink]="['home']">home</a></li>
+    <li><a [routerLink]="['users']">users</a> </li>
+    <li><a [routerLink]="['posts']">posts</a></li>
+  </ul>
+</div>
 <router-outlet></router-outlet>
 
 

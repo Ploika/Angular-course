@@ -9,13 +9,16 @@ import { IUser } from '../models/User';
 })
 export class FetchService {
   private urlUsers = 'https://jsonplaceholder.typicode.com/users';
-  
+
   constructor(private httpClient: HttpClient) {
 
   }
 
   getUsers(): Observable<IUser[]>{
     return  this.httpClient.get<IUser[]>(this.urlUsers)
+  }
+  getCurrentUSEr(id: number): Observable<IUser>{
+    return this.httpClient.get<IUser>(this.urlUsers + "/" + id)
   }
 
 }

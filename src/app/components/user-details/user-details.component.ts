@@ -1,3 +1,4 @@
+import { FetchService } from 'src/app/services/fetch.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { IUser } from 'src/app/models/User';
@@ -9,9 +10,15 @@ import { IUser } from 'src/app/models/User';
 })
 export class UserDetailsComponent implements OnInit {
   user: IUser
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private fetchService: FetchService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe(params => {
-      this.user = this.router.getCurrentNavigation()?.extras.state as IUser
+
+      const state = this.router.getCurrentNavigation()?.extras.state as IUser
+      if(state){
+        this.user = state
+      } else {
+        this.fetchService.getCurrentUSEr(params.id).subscribe(value => this.user = value)
+      }
     })
 
 

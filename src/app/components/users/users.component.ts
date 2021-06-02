@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { IUser } from './../../models/User';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
@@ -11,11 +12,10 @@ import { IPost } from 'src/app/models/Post';
 })
 export class UsersComponent implements OnInit {
   users: IUser[];
-  constructor(private fetchService: FetchService) {
+  constructor( private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.data.subscribe(value  => this.users = value.data)
    }
 
   ngOnInit(): void {
-    this.fetchService.getUsers().subscribe(value => this.users = value)
-
   }
 }

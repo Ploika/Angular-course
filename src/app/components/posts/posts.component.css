@@ -1,0 +1,9 @@
+.main_posts{
+  display: flex;
+}
+.left_posts{
+  width: 35%;
+}
+.right_posts{
+  width: 60%;
+}

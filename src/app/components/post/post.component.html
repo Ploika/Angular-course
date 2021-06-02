@@ -1,7 +1,7 @@
 <p>
   {{post.id}} -
   {{post.title}}
-  <button><a [routerLink]="[post.id]">post details</a></button>
+  <button (click)="goToPostDetails()">post details</button>
 </p>
 
 

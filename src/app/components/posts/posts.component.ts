@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { IPost } from './../../models/Post';
 import { Component, Input, OnInit } from '@angular/core';
 import { FetchService } from 'src/app/services/fetch.service';
@@ -13,11 +14,12 @@ export class PostsComponent implements OnInit {
   userId: number;
 
   posts: IPost[];
-  constructor(private postService: PostService) { }
+  constructor(private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.data.subscribe(value => this.posts = value.data)
+   }
 
   ngOnInit(): void {
-    // this.fetchService.getCurrentPosts(this.userId).subscribe(value => this.posts = value)
-    this.postService.getPosts().subscribe(value => {this.posts = value})
+
   }
 
 }
