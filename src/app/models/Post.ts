@@ -1,6 +1,6 @@
 export interface IPost {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+  id: number,
+  userId: number,
+  title: string,
+  body: string
 }
