@@ -18,7 +18,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+.main_users{
+  display: flex;
+}
+.left_users{
+  width: 30%;
+}
+.right_users{
+  width: 75%;
+}
