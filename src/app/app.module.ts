@@ -5,6 +5,7 @@ import { AppComponent } from './components/app/app.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
