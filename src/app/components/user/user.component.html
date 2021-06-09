@@ -1,9 +1,5 @@
-<h1>
-  {{user.id}}
-  {{user.name}} -
-  {{user.username}} -
-  {{user.email}}
-</h1>
-
-<app-posts [userId] ="user.id"></app-posts>
-<hr>
+<div>
+  {{user.id}} -
+  {{user.name}}
+  <button (click)="getDetails()">click</button>
+</div>

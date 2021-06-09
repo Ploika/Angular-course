@@ -1,0 +1,4 @@
+<div *ngIf="currentUser">
+  <p> <strong>{{currentUser.id}} </strong> - Hello I'm {{currentUser.name}}</p>
+  <button (click)="catchCurrentUser()">click me</button>
+</div>
