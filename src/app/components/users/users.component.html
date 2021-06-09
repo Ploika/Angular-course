@@ -1,6 +1,4 @@
 <app-user *ngFor="let user of users" [user] ="user" (lift)="catchUser($event)"></app-user>
 <br>
 <app-user-details [currentUser]="secondUser"></app-user-details>
-<!-- <div *ngIf="secondUser">
-  <strong>{{secondUser?.id}}  {{secondUser?.name}}</strong>  <button (click)="getCurrentValue()">click me</button>
-</div> -->
+

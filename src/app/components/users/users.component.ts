@@ -21,8 +21,6 @@ export class UsersComponent implements OnInit {
   catchUser(value: any): void {
     this.secondUser = value;
   }
-  // getCurrentValue(): void{
-  //   this.dataTransfer.store.next(this.secondUser.name)
-  // }
+  
 
 }
