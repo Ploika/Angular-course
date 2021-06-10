@@ -1,24 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { UsersComponent } from './components/users/users.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UserComponent } from './components/user/user.component';
-import { PostsComponent } from './components/posts/posts.component';
-import { PostComponent } from './components/post/post.component'
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { TemplateDrivenFormsComponent } from './components/template-driven-forms/template-driven-forms.component';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { SelectComponent } from './components/select/select.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    UserComponent,
-    PostsComponent,
-    PostComponent
+    TemplateDrivenFormsComponent,
+    ReactiveFormsComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
