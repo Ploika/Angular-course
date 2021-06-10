@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TemplateDrivenFormsComponent } from './components/template-driven-forms/template-driven-forms.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { SelectComponent } from './components/select/select.component';
+import { CarsComponent } from './components/cars/cars.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { SelectComponent } from './components/select/select.component';
     TemplateDrivenFormsComponent,
     ReactiveFormsComponent,
     SelectComponent,
+    CarsComponent,
+    UserDetailsComponent,
+    UserPostsComponent,
   ],
   imports: [
     BrowserModule,

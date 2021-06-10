@@ -9,7 +9,7 @@ import { IUser } from '../models/user';
   styleUrls: ['./select.component.css']
 })
 export class SelectComponent implements OnInit {
-  userDetails: string
+  userDetails: number
   users: IUser[]
 
   myForm = new FormGroup({
@@ -21,7 +21,8 @@ export class SelectComponent implements OnInit {
     this.userService.getUsers().subscribe(value => this.users = value)
   }
   save(): void {
-    console.log(this.users);
+    this.userDetails = +this.myForm.controls.id.value
+
   }
 
 }
