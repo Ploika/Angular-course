@@ -1,31 +1,21 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { TemplateDrivenFormsComponent } from './components/template-driven-forms/template-driven-forms.component';
-import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
-import { SelectComponent } from './components/select/select.component';
-import { CarsComponent } from './components/cars/cars.component';
-import { UserDetailsComponent } from './components/user-details/user-details.component';
-import { UserPostsComponent } from './components/user-posts/user-posts.component';
-
+import { MoviesComponent } from './components/movies/movies.component';
+import { MovieComponent } from './components/movie/movie.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateDrivenFormsComponent,
-    ReactiveFormsComponent,
-    SelectComponent,
-    CarsComponent,
-    UserDetailsComponent,
-    UserPostsComponent,
+    MoviesComponent,
+    MovieComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
